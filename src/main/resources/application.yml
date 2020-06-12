@@ -1,0 +1,25 @@
+spring:
+  rabbitmq:
+    username: user
+    password: password
+    host: localhost
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+  datasource:
+    username: sa
+    password: 12345678Test*
+    url: jdbc:sqlserver://localhost;databaseName=production
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+application:
+  adapter:
+    owm:
+      url: https://api.openweathermap.org/data/2.5
+      apiKey: 0dd979caaafc4d908b17f2afb8574317
+feign:
+  client.config:
+    owm:
+      connect-timeout: 1000

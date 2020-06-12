@@ -1,0 +1,28 @@
+spring:
+  rabbitmq:
+    username: user
+    password: password
+    host: test
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+  datasource:
+    username: sa
+    password: sa
+    url: test
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+application:
+  adapter:
+    owm:
+      url: test
+      apiKey: test
+feign:
+  client.config:
+    owm:
+      connect-timeout: 1000
+
+
+
